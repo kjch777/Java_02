@@ -1,0 +1,31 @@
+package com.kh.Hamburger;
+
+import java.util.*;
+
+public class BurgerShop {
+
+	public static void main(String[] args) {
+		
+		// ArrayList 사용
+		// List<불러올 필수 생성자 이름> 새로운 변수명 = new ArrayList();
+		List<HamburgerOrder> orderList = new ArrayList();
+		
+		// 새로운 변수명.add(new 불러올 필수 생성자 이름(값 추가))
+		orderList.add(new HamburgerOrder("동그라미", "치즈"));
+		orderList.add(new HamburgerOrder("세모", "베이컨"));
+		orderList.add(new HamburgerOrder("네모", "치킨"));
+		orderList.add(new HamburgerOrder("하나", "불고기"));
+		orderList.add(new HamburgerOrder("둘", "상하이"));
+		
+		// toString 출력
+		System.out.println(orderList);
+		
+		// 1개씩 출력하고 싶다면 for - each 문 사용
+		// for - each 문		앞은 불러오고 새로운 변수명 : 뒤가 모집단
+		for(HamburgerOrder order : orderList) {
+			System.out.println(order); // 앞의 새로운 변수명
+		}
+		
+	}
+	
+}

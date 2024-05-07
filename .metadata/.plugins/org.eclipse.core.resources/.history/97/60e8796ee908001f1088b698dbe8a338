@@ -1,0 +1,21 @@
+package com.kh.NumberSystem;
+
+public class 숫자시스템 {
+	public static void main(String[] args) {
+		int 숫자 = 42;
+		
+		// 2진수로 변환하기
+		//            정수로 된 숫자 ▶ 문자열로 변환하여 사람이 읽을 수 있게 하기 위해 String 으로 변환
+		String 이진수 = Integer.toBinaryString(숫자);
+		System.out.println(이진수);
+		
+		// 8진수로 변환하기
+		String 팔진수 = Integer.toOctalString(숫자);
+		System.out.println(팔진수);
+		
+		// 10진수로 변환하려면 2진수로 변환한 값을 가져와서 10진수로 변환해야 한다.
+		String 이진수2 = "101010";
+		int 십진수 = Integer.parseInt(이진수2, 2);
+		System.out.println(십진수);
+	}
+}

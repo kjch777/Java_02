@@ -1,0 +1,19 @@
+package ncs.test8;
+
+public class UserTest {
+	public static void main(String[] args) {
+		
+		// User 객체를 담을 수 있는 배열을 선언하기
+		User[] users = new User[3];
+		
+		// 3개의 User 객체를 생성하여 배열에 집어넣기
+		users[0] = new User("user01", "pw01", "김철수", 32, 'M', "010-1234-5678");
+		users[1] = new User("user02", "pw02", "이영희", 25, 'F', "010-5678-9123");
+		users[2] = new User("user03", "pw03", "박유리", 20, 'F', "010-7777-8888");
+		
+		// users 에 담긴 값들 모두 출력
+		for(User user : users) {
+			System.out.println(user.toString());
+		}
+	}
+}

@@ -1,0 +1,21 @@
+package com.kh.test.main.oop;
+
+// Animal interface 하나만 상속 받으려면 implements Animal 
+// 이외에도 여러 파일을 , 를 사용하여 작성할 수 있다.
+// 다만, 파일의 종류는 interface 여야만 한다.
+// Animal 에서 소리를 만드는 makeSound 가 재사용되고 있지 않기 때문에,
+// Dog 에서 에러가 발생한다.
+public class Dog implements Animal, AnimalEat {
+	
+	// Animal 에 있는 인터페이스 메서드 구현하기
+	@Override // 주석같은 의미로, 생략 해도 상관 없지만, 개발자 간의 약속으로 작성하는 것이기 때문에
+	// 재사용할 땐 작성해주는 것이 좋다.
+	public void makeSound() {
+		System.out.println("멍멍");
+	}
+	
+	@Override
+	public void eat() {
+		System.out.println("와구와구");
+	}
+}

@@ -1,0 +1,13 @@
+package com.kh.datePre;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+public class DatePre2 {
+	public static void main(String[] args) {
+		Date now = new Date();
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy년 MM월 dd일");
+		String 문자열 = sdf.format(now);
+		System.out.println(문자열);
+	}
+}

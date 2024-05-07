@@ -1,0 +1,25 @@
+package com.kh.test.main.oop;
+
+// 자식 클래스로 부모 클래스를 상속받기
+// 상속은 extends 를 사용하여 진행
+// 인터페이스가 아니라 클래스를 상속 받을 때에는, 하나만 상속받을 수 있기 때문에, extends 를 사용한 후 하나의 클래스만 작성해주어야 한다.
+public class Child extends Parent {
+
+// 필드
+	int cV; // child Variable
+	
+// 메서드
+	// 기본 생성자
+	public Child() {
+		// Ctrl + Space ▶ constructor 표시가 있는지 확인 후 Enter
+	}
+	
+	// 필수 생성자 Alt + Shift + S ▶ O
+	// pV 는 Parent 에서 가져오기
+	public Child(int pV, int cV) {
+		super(pV);
+		this.cV = cV;
+	}
+	
+	
+}

@@ -1,0 +1,21 @@
+package com.kh.Hamburger;
+
+import java.util.*;
+
+public class BurgerShop {
+
+	public static void main(String[] args) {
+		
+		// ArrayList 사용
+		List<HamburgerOrder> orderList = new ArrayList();
+		orderList.add(new HamburgerOrder("동그라미", "치즈"));
+		orderList.add(new HamburgerOrder("세모", "베이컨"));
+		orderList.add(new HamburgerOrder("네모", "치킨"));
+		orderList.add(new HamburgerOrder("하나", "불고기"));
+		orderList.add(new HamburgerOrder("둘", "상하이"));
+		
+		// toString 출력
+		System.out.println(orderList);
+	}
+	
+}

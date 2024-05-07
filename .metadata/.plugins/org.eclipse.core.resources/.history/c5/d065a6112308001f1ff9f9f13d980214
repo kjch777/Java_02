@@ -1,0 +1,26 @@
+package com.kh.pizzaOrder;
+
+import java.util.*;
+
+public class PizzaShop extends PizzaOrder {
+
+	public static void main(String[] args) {
+		// 주문 목록을 저장할 ArrayList 생성하고,
+		ArrayList<String> orderList = new ArrayList();
+		orderList.add(null);
+		
+		// HashSet 을 사용하여 중복 주문을 방지하기 위한 set 생성
+		Set<String> orderCheck = new HashSet();
+		
+		// PizzaOrder 를 사용하여 주문 추가
+		
+		
+		// 주문 내용 전체 보기 (toString)
+		
+		
+		// 중복 주문 정보 제거하고 출력하기
+
+		
+	}
+
+}

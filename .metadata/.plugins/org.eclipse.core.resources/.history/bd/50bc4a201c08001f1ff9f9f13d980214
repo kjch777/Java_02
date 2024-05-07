@@ -1,0 +1,32 @@
+package com.kh.test.main;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class MapPre {
+
+	public static void main(String[] args) {
+
+		// Map 도 Set 처럼 인터페이스이기 때문에,
+		// 인스턴스로 사용하려면
+		// Map<String, Integer> map = new HashMap<>(); 과 같이 사용해야 한다.
+		
+		Map<String, Integer> map = new HashMap<>();
+		
+		// 추가한 순서대로 출력되지 않는다. 즉, 순서가 보장되지 않는다.
+		map.put("apple", 2_000);
+		map.put("banana", 3_000);
+		map.put("cherry", 1_000);
+		
+		System.out.println(map);
+		
+		// 주의
+		map.put("banana", 500);
+		System.out.println(map);
+		
+		map.put(" banana", 1_000);
+		System.out.println(map);
+
+	}
+
+}

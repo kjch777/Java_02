@@ -1,0 +1,26 @@
+package pre.propertiesEx2;
+
+import java.io.*;
+import java.util.Properties;
+
+public class PropTest {
+
+// 메서드
+	public static void fileSave(Properties p) {
+		p.setProperty("1", "순풍산부인과, 1998, 682");
+		p.setProperty("2", "똑바로살아라, 2002, 329");
+		p.setProperty("3", "눈물의여왕, 2024, 16");
+		p.setProperty("4", "아내의유혹, 2008, 129");
+		
+		FileOutputStream fos;
+		try {
+			fos = new FileOutputStream("drama.xml"); // Output : 내보낼 때
+			p.storeToXML(fos, null); 
+			fos.close();
+		} catch (IOException e) {
+			
+			e.printStackTrace();
+		}
+	}
+	
+}

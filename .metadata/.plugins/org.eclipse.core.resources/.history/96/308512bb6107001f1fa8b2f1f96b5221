@@ -1,0 +1,17 @@
+package com.kh.oop.pre;
+
+// Shape, Drawable 인터페이스를 implements 를 사용해서 호출
+public class Circle implements Shape, Drawable {
+
+// 메서드
+	@Override // 재사용 표시
+	public double Area() {
+		return 4.8;
+	}
+	
+	@Override // 재사용 표시
+	public void draw() {
+		System.out.println("원을 그립니다.");
+	}
+	
+}

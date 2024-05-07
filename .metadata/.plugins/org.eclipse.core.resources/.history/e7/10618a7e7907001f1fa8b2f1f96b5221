@@ -1,0 +1,61 @@
+package com.kh.test.main;
+
+public class ParseStringPre2 {
+
+	public static void main(String[] args) {
+		
+		// 1. String 문자열 로 받은 전화번호를 int 정수 로 변환하기
+		String phoneNumber = "01012345678";
+		int num1 = Integer.parseInt(phoneNumber);
+		System.out.println("확인 1 : " + num1);
+		
+		// 2. String 문자열 로 받은 점수를 double 실수로 변환하기
+		String score = "88.8";
+		double num2 = Double.parseDouble(score);
+		System.out.println("확인 2 : " + num2);
+
+		// 3. int 정수 로 받은 전화번호를 String 문자열 로 변환하기
+		int pN2 = 1098765432;
+		String str1 = Integer.toString(pN2);
+		System.out.println("확인 3 : " + str1);
+		
+		// 4. double 실수 로 받은 점수를 String 문자열 로 변환하기
+		double score2 = 77.7;
+		String str2 = Double.toString(score2);
+		System.out.println("확인 4 : " + str2);
+		
+		// 문자열에서 - 하이픈 제거하기
+		String phoneNumber3 = "010-1234-5678";
+		
+		// .replace() : 어떤 값을 내가 원하는 값으로 모두 변경할 때 사용한다.
+		// "" 안에 아무 것도 작성하지 않으면, 삭제라는 의미로 사용된다.
+		// " " 로 작성하면 하이픈이 공백으로 바뀐다.
+		String delete = phoneNumber3.replace("-", " ");
+		System.out.println("하이픈 제거 결과 : " + delete);
+	
+		// 주민번호에서 하이픈 제거하기
+		String id = "040404-3456789";
+		String id2 = id.replace("-", "");
+		System.out.println("결과 : " + id2);
+		
+		// .charAt() 사용하기
+		String id7 = "040404-4567890";
+		String id72 = id7.replace("-", " ");
+		char gC = id72.charAt(7); // genderCode
+		
+		// 삼항 연산자를 사용하여 남 녀 출력
+		String gender = (gC == '1' || gC == '3') ? "남성" : "여성";
+		System.out.println("성별 : " + gender);
+		
+		// 실습
+		System.out.println("===== 실습 =====");
+		String id3 = "200101-4567891";
+		String id31 = id3.replace("-", "");
+		char id32 = id31.charAt(7);
+		String id33 = ((id32 == 1 || id32 == 3)) ? "남자" : "여자";
+		System.out.println("하이픈 O : " + id3);
+		System.out.println("하이픈 X : " + id31);
+		System.out.println("성별 : " + id33);
+		
+	}
+}

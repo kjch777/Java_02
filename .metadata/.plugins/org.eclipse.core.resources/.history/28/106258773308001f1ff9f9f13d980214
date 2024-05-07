@@ -1,0 +1,28 @@
+package com.kh.goodsShop;
+
+import java.util.*;
+
+public class GoodsShop {
+
+	public static void main(String[] args) {
+		
+		Map<String, Integer> item = new HashMap();
+		System.out.println("=== 제주도 기념품 판매소 ===");
+		
+		// 물품과 가격 추가하기
+		item.put("동백모자", 20_000);
+		item.put("감귤모자", 15_000);
+		item.put("돼지키링", 25_000);
+		
+		// 물품 목록 보기
+		// Map<String, Integer> == Map.Entry<안에 들어있는 자료형이 동일해야 한다.>
+		//  item 을 하나씩 키-값으로 꺼내보기    : 안에 들어있는 item 모두 보기
+		for(Map.Entry<String, Integer> e : item.entrySet()) {
+			String product = e.getKey(); // 제품 이름만 가져온 것
+			int price = e.getValue(); // 제품 가격만 가져온 것
+			System.out.println(제품 + " 은 " + 가격 + " 원 입니다.");
+		}
+		
+	}
+	
+}
