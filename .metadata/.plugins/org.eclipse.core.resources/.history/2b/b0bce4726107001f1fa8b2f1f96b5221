@@ -1,8 +1,0 @@
-package com.kh.oop.pre;
-
-public interface Drawable {
-
-// ÇÊµå
-	public void draw();
-
-}

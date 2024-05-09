@@ -19,6 +19,15 @@ public class 오버로딩 {
 	public void test(short a, String c, int b) {}
 	public void test(boolean a, boolean b, int i) {}
 	public void test(boolean a, boolean b, long l) {}
+	public String test(boolean a, char b) {
+		return "테스트"; // return 으로 반환하는 값과 매개변수 형은 서로 달라도 상관없다.
+	}
+	public int test(short i, short l) {
+		return 0;
+	}
+	public double test(short i, String j) {
+		return 1.5;
+	}
 	// 매개변수의 종류, 갯수, 순서 중에 하나만 달라도 다른 것으로 친다.
 	
 }
